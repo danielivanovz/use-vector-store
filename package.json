@@ -1,0 +1,72 @@
+{
+    "name": "use-vector-store",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsup",
+        "lint": "tsc"
+    },
+    "keywords": [
+        "natural-language-processing",
+        "indexeddb",
+        "vector-store",
+        "vector-database",
+        "embeddings",
+        "word-embeddings",
+        "semantic-search",
+        "similarity-search",
+        "embeddings-search",
+        "similarity",
+        "semantic",
+        "search",
+        "nlp"
+    ],
+    "author": "Daniel Iavnov daniel.ivanov@me.com",
+    "homepage": "https://github.com/danielivanovz/use-vector-store",
+    "license": "ISC",
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "dependencies": {
+        "@changesets/cli": "^2.26.2",
+        "changeset": "^0.2.6",
+        "idb": "^7.1.1",
+        "indexed-vector-store": "^1.4.1",
+        "tsup": "^7.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.21",
+        "typescript": "^5.2.2"
+    },
+    "tsup": {
+        "entry": [
+            "src/index.ts"
+        ],
+        "treeshake": true,
+        "sourcemap": "inline",
+        "minify": true,
+        "clean": true,
+        "dts": true,
+        "splitting": false,
+        "format": [
+            "cjs",
+            "esm"
+        ],
+        "external": [
+            "react"
+        ],
+        "injectStyle": false
+    },
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs"
+        }
+    },
+    "files": [
+        "dist"
+    ]
+}
